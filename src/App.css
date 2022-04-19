@@ -17,7 +17,7 @@ input {
 .App {
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  width: 95%;
   max-width: 850px;
   display: flex;
   flex-direction: column;
@@ -34,6 +34,12 @@ input {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar {
+      width: 95%;
+    }
 }
 
 .navbar-title {
