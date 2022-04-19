@@ -1,38 +1,209 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  font-family: 'ui sans-serif', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  min-width: 100vw;
   min-height: 100vh;
+  background: #111420;
+  font-family: inherit;
+}
+
+input {
+  outline: none;
+}
+
+.App {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  max-width: 850px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  margin: auto;
+  width: 80%;
+  padding: 1.5rem;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+.navbar-title {
+  font-family: inherit;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+.connect {
+  padding: 10px 20px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1rem;
+  background-color: transparent;
+  color: rgb(118,118,118);
+  border:1px solid rgb(118,118,118);
+  cursor: pointer;
+  transition: ease-in .3s;
+}
+
+.connect:hover {
+  color: #4ed2fe;
+  border: 1px solid #4ed2fe;
+}
+
+.connect:focus {
+  outline: none;
+}
+
+.connected {
+  color: #4ed2fe;
+  border: 1px solid #4ed2fe;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
   color: white;
+  padding-top: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+.title {
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: -1px;
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.subtitle {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 18px;
+}
+
+#message {
+  font-family: 'Space Mono', monospace;
+  text-align: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  background-color: rgba(17, 24, 39, 1);
+  border:1px solid rgb(118,118,118);
+  border-radius: 0.25rem;
+  line-height: inherit;
+  color: inherit;
+  font-size: 100%;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+#message:focus {
+  border-color: rgba(59, 130, 246,1);
+  background-color: #1f2938;
+}
+
+#message:not(:placeholder-shown) {
+  background-color: #1f2938;
+}
+
+.wave {
+  border-radius: 0.25rem;
+  outline: none;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-size: 100%;
+  border: none;
+  font-family: 'Space Mono', monospace;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 5px rgba(78, 210, 254, .2);
+}
+
+.wave:hover {
+  box-shadow: 0px 0px 8px 8px rgba(78, 210, 254, .4);
+}
+
+.wave:active {
+  transform: scale(0.98);
+}
+
+.messages {
+  min-width: 100%;
+  padding: 1.5rem;
+  padding-top: 30px;
+  color: #e5e7eb;
+  font-family: 'Space Grotesk';
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.heading h2 {
+  font-family: 'Space Grotesk';
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.message-card {
+  width: 100%;
+  background: #0b0b0c;
+  padding: 16px;
+  border-radius: 1rem;
+  height: 100px;
+}
+
+.message-card h5 {
+  margin: 0;
+  margin-top: 14px;
+  padding-left: 24px;
+  font-size: 18px;
+}
+
+.message-card .top-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.message-card h3 {
+  margin: 0;
+  font-size: 14px;
+  color: #4ed2fe;
+}
+
+.message-card p {
+  margin: 0;
+  color: #bd93da;
+}
+
+.text-gradient {
+  background: linear-gradient(118deg, #4ed2fe, #bd93da 80%, #6270ee);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
