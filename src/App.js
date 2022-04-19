@@ -140,6 +140,9 @@ function App() {
   }, []);
 
   const sendWave = async (message) => {
+    if (message === '') {
+      return;
+    }
     try {
       const { ethereum } = window;
 
